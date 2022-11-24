@@ -11,9 +11,8 @@ val usersFile: File = File("users.json")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Serializable
 data class User(
-  val _id: Int,
   val ownerID: Int,
-  val balance: Double
+  val userName: String
 ) {
   companion object {
     @JvmStatic

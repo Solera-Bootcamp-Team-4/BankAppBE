@@ -11,9 +11,10 @@ val transactionsFile: File = File("transactions.json")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Serializable
 data class Transaction(
-  val _id: Int,
-  val ownerID: Int,
-  val balance: Double
+  val transactionID: Int,
+  val senderAccount: Int,
+  val recipientAccount: Int,
+  val amount: Double
 ) {
   companion object {
     @JvmStatic
