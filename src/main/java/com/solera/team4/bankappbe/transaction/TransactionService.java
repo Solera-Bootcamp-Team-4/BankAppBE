@@ -10,7 +10,7 @@ public class TransactionService {
     //@Autowired
     //A class to read/write on the transactions' file
 
-    public List<Transactio> getTransactions() {
+    public List<TransactionEntity> getTransactions() {
         return null;
     }
 }

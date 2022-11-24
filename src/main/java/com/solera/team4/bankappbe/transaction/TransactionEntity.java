@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Transactio {
+public class TransactionEntity {
    
     private int id; //Id of the transaction
     private double ammount;

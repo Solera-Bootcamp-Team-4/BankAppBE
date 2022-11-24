@@ -19,8 +19,8 @@ public class TransactionController {
     @GetMapping
     public ResponseEntity<?> getTransaction(){
         try {
-            List<Transactio> transactions = transactionService.getTransactions();
-            return new ResponseEntity<List<Transactio>>(transactions, HttpStatus.OK);
+            List<TransactionEntity> transactions = transactionService.getTransactions();
+            return new ResponseEntity<List<TransactionEntity>>(transactions, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<String>(e.getMessage(), HttpStatus.CONFLICT);
         }
