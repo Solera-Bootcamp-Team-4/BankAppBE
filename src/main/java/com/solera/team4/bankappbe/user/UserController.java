@@ -1,4 +1,4 @@
-package com.solera.team4.bancappbe.user;
+package com.solera.team4.bankappbe.user;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

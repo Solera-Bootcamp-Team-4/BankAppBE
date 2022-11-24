@@ -1,10 +1,10 @@
-package com.solera.team4.bancappbe;
+package com.solera.team4.bankappbe;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BancappbeApplicationTests {
+class BankappbeApplicationTests {
 
 	@Test
 	void contextLoads() {
