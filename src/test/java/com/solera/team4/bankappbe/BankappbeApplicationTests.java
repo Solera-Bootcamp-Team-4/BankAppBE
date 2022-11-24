@@ -15,7 +15,7 @@ class BankappbeApplicationTests {
 		String uname = "solera@solera.com";
 		String pass = "bootcamp4";
 		
-		AssertTrue(tryLogin(uname, pass));
+		//AssertTrue(tryLogin(uname, pass));
 	
 	}
 }
