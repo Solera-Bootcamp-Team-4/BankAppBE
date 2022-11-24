@@ -9,5 +9,13 @@ class BancappbeApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
+	
+	@Test
+	void enterTestUserDetails() {
+		String uname = "solera@solera.com";
+		String pass = "bootcamp4";
+		
+		AssertTrue(tryLogin(uname, pass));
+	
+	}
 }
