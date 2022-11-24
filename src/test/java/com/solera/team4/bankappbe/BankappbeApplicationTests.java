@@ -11,11 +11,19 @@ class BankappbeApplicationTests {
 	}
 	
 	@Test
-	void enterTestUserDetails() {
+	void testValidLogin() {
 		String uname = "solera@solera.com";
 		String pass = "bootcamp4";
 		
 		AssertTrue(tryLogin(uname, pass));
 	
+	}
+	
+	@Test
+	void testCreateNewUser() {
+		String uname = "test@test.com";
+		String pass = "password";
+		
+		AssertTrue(createNewUser(uname, pass));
 	}
 }
