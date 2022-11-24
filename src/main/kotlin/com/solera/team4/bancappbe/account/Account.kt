@@ -11,7 +11,6 @@ val accountsFile: File = File("accounts.json")
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Serializable
 data class Account(
-  val _id: Int,
   val ownerID: Int,
   val balance: Double
 ) {
