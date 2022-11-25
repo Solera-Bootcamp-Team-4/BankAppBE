@@ -23,14 +23,16 @@ public class TransactionService {
         throw new Exception("The transaction with id \"" + id + "\" doesn't exist.");
     }
 
-    public String createTransactions(TransactionEntity transaction) throws Exception {
+    public String createTransactions(TransactionEntityNoDate transaction) throws Exception {
         List<TransactionEntity> list = db.get();
         for (TransactionEntity transactionEntity : list) {
             if(transactionEntity.getId() == transaction.getId()){
                 throw new Exception("The id of the transaction already exists, please check it again before submit!");
             }
         }
-        return db.add(transaction);
+        TransactionEntity tmpTrans = new 
+        TransactionEntity(transaction.getId(), transaction.getAmmount(), transaction.getFrom(), transaction.getTo());
+        return db.add(tmpTrans);
     }
 
     public String deleteTransactions(int transactionId) throws Exception {
