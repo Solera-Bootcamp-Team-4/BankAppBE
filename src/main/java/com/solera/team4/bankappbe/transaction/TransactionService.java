@@ -23,12 +23,23 @@ public class TransactionService {
         throw new Exception("The transaction with id \"" + id + "\" doesn't exist.");
     }
 
-    public String createTransactions(TransactionEntity transaction) {
-        
-        return null;
+    public String createTransactions(TransactionEntity transaction) throws Exception {
+        List<TransactionEntity> list = db.get();
+        for (TransactionEntity transactionEntity : list) {
+            if(transactionEntity.getId() == transaction.getId()){
+                throw new Exception("The id of the transaction already exists, please check it again before submit!");
+            }
+        }
+        return db.add(transaction);
     }
 
-    public String deleteTransactions(int transactionId) {
-        return null;
+    public String deleteTransactions(int transactionId) throws Exception {
+        List<TransactionEntity> list = db.get();
+        for (TransactionEntity transactionEntity : list) {
+            if(transactionEntity.getId() == transactionId){
+                return db.remove(transactionId);
+            }
+        }
+        throw new Exception("The id of the transaction doesn't exists, please check it again before submit!");
     }
 }
