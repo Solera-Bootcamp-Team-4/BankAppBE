@@ -14,11 +14,7 @@ public class BankappbeApplicationTests {
 		String uname = "solera@solera.com";
 		String pass = "bootcamp4";
 		
-<<<<<<< HEAD
-		//AssertTrue(tryLogin(uname, pass));
-=======
 		assertEquals(true, tryLogin(uname, pass));
->>>>>>> conor
 	
 	}
 	
