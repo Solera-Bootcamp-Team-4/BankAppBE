@@ -1,4 +1,4 @@
-package com.solera.team4.bankappbe.Selenium;
+package com.solera.team4.bankappbe.Selenium.Configurations;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
