@@ -1,28 +1,14 @@
 package com.solera.team4.bankappbe.transaction;
 
-import java.time.LocalDateTime;
-
 import org.springframework.stereotype.Component;
 
 @Component
-public class TransactionEntity {
-   
+public class TransactionEntityNoDate {
+
     private int id; //Id of the transaction
     private double ammount;
     private TransactionDTO from;
     private TransactionDTO to;
-    private LocalDateTime date;
-
-    public TransactionEntity(int id, double ammount, TransactionDTO from, TransactionDTO to) {
-        this.id = id;
-        this.ammount = ammount;
-        this.from = from;
-        this.to = to;
-        this.date = LocalDateTime.now();
-    }
-
-    public TransactionEntity() {
-    }
 
     public int getId() {
         return id;
@@ -48,10 +34,4 @@ public class TransactionEntity {
     public void setTo(TransactionDTO to) {
         this.to = to;
     }
-    public LocalDateTime getDate() {
-        return date;
-    }
-    public void setDate(LocalDateTime date) {
-        this.date = date;
-    }  
 }
