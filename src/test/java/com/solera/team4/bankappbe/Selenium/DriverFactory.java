@@ -1,6 +1,8 @@
 package com.solera.team4.bankappbe.Selenium;
 
-import org.openga.selenium.WebDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverFactory {
     
@@ -29,5 +31,7 @@ public class DriverFactory {
                 threadLocal.set(new ChromeDriver());
                 break;
         }
+
+        return threadLocal.get();
     }
 }
