@@ -1,4 +1,4 @@
-package com.solera.team4.bankappbe.bankAccount;
+package com.solera.team4.bankappbe.bankaccount;
 
 import java.util.List;
 
