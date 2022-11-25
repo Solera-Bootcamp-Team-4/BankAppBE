@@ -1,6 +1,6 @@
 package com.solera.team4.bankappbe;
 
-import static org.testng.AssertJUnit.assertEquals;
+import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import static com.solera.team4.bankappbe.user.Login.tryLogin;
