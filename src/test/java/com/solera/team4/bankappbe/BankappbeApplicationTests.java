@@ -1,22 +1,33 @@
 package com.solera.team4.bankappbe;
 
+import static org.testng.AssertJUnit.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import static com.solera.team4.bankappbe.user.Login.tryLogin;
+import static com.solera.team4.bankappbe.user.CreateNewUser.createNewUser;;
 
 @SpringBootTest
-class BankappbeApplicationTests {
+public class BankappbeApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-	
 	@Test
 	void testValidLogin() {
 		String uname = "solera@solera.com";
 		String pass = "bootcamp4";
 		
+<<<<<<< HEAD
 		//AssertTrue(tryLogin(uname, pass));
+=======
+		assertEquals(true, tryLogin(uname, pass));
+>>>>>>> conor
 	
+	}
+	
+	@Test
+	void testInvalidLogin() {
+		String uname = "joe";
+		String pass = "mama";
+		
+		assertEquals(false, tryLogin(uname, pass));
 	}
 	
 	@Test
@@ -24,6 +35,6 @@ class BankappbeApplicationTests {
 		String uname = "test@test.com";
 		String pass = "password";
 		
-		AssertTrue(createNewUser(uname, pass));
+		assertEquals(true, createNewUser(uname, pass));
 	}
 }
