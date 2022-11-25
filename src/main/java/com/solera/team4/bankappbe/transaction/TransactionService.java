@@ -7,10 +7,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class TransactionService {
 
-    //@Autowired
-    //A class to read/write on the transactions' file
+    TransactionDb db = new TransactionDb();
 
-    public List<TransactionEntity> getTransactions() {
+    public List<TransactionEntity> getAllTransactions() {
+        return db.get();
+    }
+
+    public TransactionEntity getSingleTransactions(int id) throws Exception {
+        List<TransactionEntity> list = db.get();
+        for (TransactionEntity transactionEntity : list) {
+            if(transactionEntity.getId() == id){
+                return transactionEntity;
+            }
+        }
+        throw new Exception("The transaction with id \"" + id + "\" doesn't exist.");
+    }
+
+    public String createTransactions(TransactionEntity transaction) {
+        
+        return null;
+    }
+
+    public String deleteTransactions(int transactionId) {
         return null;
     }
 }
