@@ -10,10 +10,11 @@ public class DriverFactory {
 
     private DriverFactory(){}
 
-    public static void getInstance(){
+    public static DriverFactory getInstance(){
          if(driverFactory.equals(null)){
             driverFactory = new DriverFactory(); 
         }
+        return driverFactory;
     }
 
     private static ThreadLocal<WebDriver> threadLocal = new ThreadLocal<WebDriver>();
