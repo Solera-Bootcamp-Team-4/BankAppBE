@@ -53,23 +53,19 @@ public class BankAccountService {
        return bankAccountDb.add(newAccount);
     }
 
-    public String editAccountName(int accountId, String newName) throws Exception
-    {
-        List<BankAccount> accountList = bankAccountDb.getAccounts();
-        for (BankAccount bankAccount : accountList)
-        {
-            if(bankAccount.getId() == accountId){
-                throw  new Exception("Account doesn't exists");
-            }
-        }
-        BankAccount account = new BankAccount();
-        account.ownerName = newName;
-       return "Name changed";
-    }
+//    public String editAccountName(int accountId, String newName) throws Exception
+//    {
+//        List<BankAccount> accountList = bankAccountDb.getAccounts();
+//        for (BankAccount bankAccount : accountList)
+//        {
+//            if(bankAccount.getId() == accountId){
+//                throw  new Exception("Account doesn't exists");
+//            }
+//        }
+//        BankAccount account = new BankAccount();
+//        account.ownerName = newName;
+//       return "Name changed";
+//    }
 
-    public String editName(String newName)
-    {
-        return null;
-    }
 
 }

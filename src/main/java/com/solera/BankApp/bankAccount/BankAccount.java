@@ -7,7 +7,7 @@ public class BankAccount {
     
     private int id;
     private double balance;
-    public String ownerName;
+    private String ownerName;
     
     public int getId() {
         return id;
