@@ -1,6 +1,0 @@
-[
-  {"accountID": 1, "ownerID": "1", "accountName": "Savings"},
-  {"accountID": 2, "ownerID": "2", "accountName": "Retirement"},
-  {"accountID": 3, "ownerID": "3", "accountName": "Standard account"},
-  {"accountID": 4, "ownerID": "3", "accountName": "Standard account"}
-]
